@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #f5f6f8;
+    font-family: sans-serif;
+    color: #333;
+  }
+
+  .quote-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 3px 15px #0000000a;
+  }
+
+  .label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #999;
+  }
+
+  #quote {
+    font-size: 21px;
+    line-height: 1.9;
+    margin: 24px 0;
+  }
+
+  #author {
+    font-size: 14px;
+    color: #888;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 22px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background: white;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="quote-card">
+  <div class="label">TODAY'S QUOTE</div>
+  <div id="quote">名言を読み込み中...</div>
+  <div id="author"></div>
+  <button onclick="showQuote()">次の名言 →</button>
+</div>
+
+<script>
+const quotes = [
+  {
+    text: "想像力は知識より重要である。",
+    author: "アルベルト・アインシュタイン"
+  },
+  {
+    text: "私には夢がある。",
+    author: "マーティン・ルーサー・キング・ジュニア"
+  },
+  {
+    text: "私は失敗したことがない。うまくいかない方法を見つけただけだ。",
+    author: "トーマス・エジソン（とされる言葉）"
+  },
+  {
+    text: "天才とは、1％のひらめきと99％の努力である。",
+    author: "トーマス・エジソン（とされる言葉）"
+  },
+  {
+    text: "何事も成功するまでは不可能に思えるものである。",
+    author: "ネルソン・マンデラ"
+  }
+];
+
+function showQuote() {
+  const random = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").textContent =
+    "「" + quotes[random].text + "」";
+  document.getElementById("author").textContent =
+    "— " + quotes[random].author + " —";
+}
+
+// 読み込み時にランダム表示
+showQuote();
+</script>
+
+</body>
+</html>
