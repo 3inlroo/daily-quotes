@@ -2,154 +2,27 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Today's Quote</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Quote</title>
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    padding: 8px;
-    font-family:
-      "Noto Sans JP",
-      "Yu Gothic",
-      sans-serif;
-    background: transparent;
-  }
-
-  .quote-box {
-    width: 100%;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background: #E7F3F8;
-    border-radius: 5px;
-    color: #344B5B;
-  }
-
-  .quote-icon {
-    flex-shrink: 0;
-    padding-left: 16px;
-    font-size: 21px;
-  }
-
-  .ticker {
-    flex: 1;
-    min-width: 0;
-    overflow: hidden;
-    margin-left: 15px;
-  }
-
-  .ticker-track {
-    display: flex;
-    width: max-content;
-    animation: ticker 28s linear infinite;
-  }
-
-  .ticker-group {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  .quote-text {
-    white-space: nowrap;
-    font-size: 15px;
-    font-weight: 500;
-    padding-right: 100px;
-  }
-
-  @keyframes ticker {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .ticker-track {
-      animation: none;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .quote-text {
-      font-size: 13px;
-      padding-right: 60px;
-    }
-  }
-</style>
+  <!-- CSSファイルを読み込む -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="quote-box">
-  <div class="quote-icon">✦</div>
+  <div class="quote-box">
+    <div class="quote-icon">✦</div>
 
-  <div class="ticker">
-    <div class="ticker-track" id="tickerTrack">
-      <div class="ticker-group">
-        <span class="quote-text" id="quote1"></span>
-      </div>
-      <div class="ticker-group" aria-hidden="true">
-        <span class="quote-text" id="quote2"></span>
-      </div>
+    <div class="quote-content">
+      <span class="quote-text" id="quoteText"></span>
+      <span class="quote-author" id="quoteAuthor"></span>
     </div>
   </div>
-</div>
 
-<script>
-  const quotes = [
-    {
-      text: "想像力は知識より重要である。",
-      author: "アルベルト・アインシュタイン"
-    },
-    {
-      text: "大きなことを百個言って、ひとつでも叶えたら、「あの人すごい」となる。",
-      author: "名言集"
-    },
-    {
-      text: "成績は天下を取る。",
-      author: "名言集"
-    },
-    {
-      text: "未来を予測する最良の方法は、未来を創ることだ。",
-      author: "アラン・ケイ"
-    },
-    {
-      text: "千里の道も一歩から。",
-      author: "老子"
-    },
-    {
-      text: "継続は力なり。",
-      author: "日本のことわざ"
-    }
-  ];
-
-  // ページを開くたびにランダム選択
-  const randomIndex = Math.floor(
-    Math.random() * quotes.length
-  );
-
-  const selected = quotes[randomIndex];
-
-  const displayText =
-    `「${selected.text}」　— ${selected.author}`;
-
-  // 同じ内容を2つ並べて自然にループ
-  document.getElementById("quote1").textContent =
-    displayText;
-
-  document.getElementById("quote2").textContent =
-    displayText;
-</script>
+  <!-- JavaScriptファイルを読み込む -->
+  <script src="script.js"></script>
 
 </body>
 </html>
