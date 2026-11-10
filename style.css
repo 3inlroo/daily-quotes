@@ -15,7 +15,7 @@ body {
   min-height: 68px;
   display: flex;
   align-items: center;
-  background: #E7F3F8;
+  background: #D9C9DF;
   border-radius: 5px;
   padding: 15px 18px;
   gap: 14px;
@@ -36,14 +36,14 @@ body {
 }
 
 .quote-text {
-  color: #344B5B;
+  color: #59416F;
   font-size: 15px;
   font-weight: 500;
   line-height: 1.7;
 }
 
 .quote-author {
-  color: #718896;
+   color: #B17C9D;
   font-size: 13px;
   white-space: nowrap;
 }
