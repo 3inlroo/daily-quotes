@@ -1,0 +1,59 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 8px;
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  background: transparent;
+}
+
+.quote-box {
+  width: 100%;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  background: #E7F3F8;
+  border-radius: 5px;
+  padding: 15px 18px;
+  gap: 14px;
+}
+
+.quote-icon {
+  flex-shrink: 0;
+  font-size: 21px;
+  color: #718896;
+}
+
+.quote-content {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.quote-text {
+  color: #344B5B;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.quote-author {
+  color: #718896;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+@media (max-width: 500px) {
+  .quote-text {
+    font-size: 13px;
+  }
+
+  .quote-author {
+    font-size: 12px;
+  }
+}
