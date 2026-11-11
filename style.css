@@ -15,7 +15,7 @@ body {
   min-height: 68px;
   display: flex;
   align-items: center;
-  background: #D9C9DF;
+  background: #F4EAF8;
   border-radius: 5px;
   padding: 15px 18px;
   gap: 14px;
@@ -24,7 +24,7 @@ body {
 .quote-icon {
   flex-shrink: 0;
   font-size: 21px;
-  color: #E6C77A;
+  color: #D6AE57;
 }
 
 .quote-content {
@@ -36,14 +36,14 @@ body {
 }
 
 .quote-text {
-  color: #59416F;
+  color: #756681;
   font-size: 15px;
   font-weight: 500;
   line-height: 1.7;
 }
 
 .quote-author {
-   color: #B17C9D;
+  color: #A18AAE;
   font-size: 13px;
   white-space: nowrap;
 }
