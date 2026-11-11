@@ -26,6 +26,7 @@ body {
 .quote-icon {
   flex-shrink: 0;
   font-size: 21px;
+  margin-left: 5px;
   color: #D6AE57;
 }
 
